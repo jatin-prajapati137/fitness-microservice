@@ -1,0 +1,2 @@
+# Project exclude paths
+/userservice/userservice/${project.build.directory}/test-classes/
