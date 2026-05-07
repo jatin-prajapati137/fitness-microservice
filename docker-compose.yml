@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+
+  eureka:
+    build: ./eureka/eureka
+    ports:
+      - "8761:8761"
+
+  configserver:
+    build: ./configserver/configserver
+    ports:
+      - "8888:8888"
+
+  userservice:
+    build: ./userservice/userservice
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka
+
+  activityservice:
+    build: ./activityservice/activityservice
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka
+
+  aiservice:
+    build: ./aiservice/aiservice
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka
+
+  gateway:
+    build: ./gateway/gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka
+
