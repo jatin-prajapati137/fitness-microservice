@@ -13,21 +13,21 @@ public class ActivityserviceApplication {
 		SpringApplication.run(ActivityserviceApplication.class, args);
 	}
 
-	@SpringBootApplication
-	public class AiRecommendationServiceApplication {
-
-		@Value("${spring.data.mongodb.uri}")
-		private String mongoUri;
-
-		@PostConstruct
-		public void printMongo() {
-			System.out.println("Mongo URI = " + mongoUri);
-		}
-
-		public static void main(String[] args) {
-			SpringApplication.run(AiRecommendationServiceApplication.class, args);
-		}
-	}
+//	@SpringBootApplication
+//	public class AiRecommendationServiceApplication {
+//
+//		@Value("${spring.data.mongodb.uri}")
+//		private String mongoUri;
+//
+//		@PostConstruct
+//		public void printMongo() {
+//			System.out.println("Mongo URI = " + mongoUri);
+//		}
+//
+//		public static void main(String[] args) {
+//			SpringApplication.run(AiRecommendationServiceApplication.class, args);
+//		}
+//	}
 
 
 }
